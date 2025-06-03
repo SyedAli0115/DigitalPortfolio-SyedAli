@@ -7,6 +7,22 @@
 // Scripts
 // 
 
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
+
+function toggleResume(event) {
+    event.preventDefault(); // Prevent link from navigating
+    const container = document.getElementById('resume-object-container');
+
+    if (container.style.display === 'none' || container.style.display === '') {
+      container.style.display = 'block';
+      container.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      container.style.display = 'none';
+    }
+}
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
